@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baixe a Imagem</title>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+</head>
+<body>
+    <h1>Escaneie o QR Code para Baixar a Imagem</h1>
+
+    <!-- Aqui será gerado o QR Code -->
+    <div id="qrcode"></div>
+
+    <script>
+        var imagemURL = "https://media.discordapp.net/attachments/978398923519557654/1330252002369863912/feito2.png?ex=678d4d38&is=678bfbb8&hm=d8c21385c8e513d284762cf1cc41db6ca9eab32861921a33209144f867ab7846&=&format=webp&quality=lossless";  // Substitua pelo link da sua imagem (verifique se a URL é válida)
+        QRCode.toCanvas(document.getElementById('qrcode'), imagemURL, function (error) {
+            if (error) {
+                console.error('Erro ao gerar QR Code:', error);
+            } else {
+                console.log('QR Code gerado com sucesso!');
+            }
+        });
+    </script>
+</body>
+</html>
